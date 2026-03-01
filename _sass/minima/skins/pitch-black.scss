@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+$color-scheme-auto: false;
+$color-scheme-dark: true;
+
+$dm-brand-color: #8e8e8e;
+$dm-brand-color-light: #a6a6a6;
+$dm-brand-color-dimmed: #7a7a7a;
+$dm-brand-color-dark: #1a1a1a;
+
+$dm-site-title-color: #d0d0d0;
+
+$dm-heading-color: #e3e3e3;
+$dm-text-color: #c0c0c0;
+$dm-background-color: #000000;
+$dm-code-background-color: #0c0c0c;
+
+$dm-link-base-color: #8fb9ff;
+$dm-link-visited-color: #a7c8ff;
+$dm-link-hover-color: #f0f0f0;
+
+$dm-border-color-01: #1f1f1f;
+$dm-border-color-02: #343434;
+$dm-border-color-03: #5a5a5a;
+
+$dm-table-text-color: #c0c0c0;
+$dm-table-zebra-color: #0f0f0f;
+$dm-table-header-bg-color: #141414;
+$dm-table-header-border: #1f1f1f;
+$dm-table-border-color: #242424;
+
+@import "minima/skins/auto";

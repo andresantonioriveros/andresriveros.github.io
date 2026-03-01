@@ -1,6 +1,14 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: base
 ---
+
+<section aria-label="Profile overview">
+  <div>
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+
+    <nav aria-label="Social links">
+      {%- include social.html -%}
+    </nav>
+  </div>
+</section>
