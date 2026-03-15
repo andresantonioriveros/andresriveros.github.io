@@ -4,7 +4,7 @@
     class="photo-card__button-reset"
     data-photo-trigger
     {% assign photo_src = include.image %}
-    {% if jekyll.environment == "development" and include.local_image %}
+    {% if jekyll.environment != "production" and include.local_image %}
       {% assign photo_src = include.local_image | relative_url %}
     {% endif %}
     {% assign photo_alt = include.title %}
@@ -21,7 +21,7 @@
     data-photo-focal-length="{{ include.settings.focal_length | default: '' }}"
     data-photo-instagram="{{ include.instagram_url | default: '' }}"
     {% assign photo_original = include.original_image | default: include.image %}
-    {% if jekyll.environment == "development" and include.local_original_image %}
+    {% if jekyll.environment != "production" and include.local_original_image %}
       {% assign photo_original = include.local_original_image | relative_url %}
     {% endif %}
     data-photo-original="{{ photo_original }}"
