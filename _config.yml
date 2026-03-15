@@ -29,6 +29,10 @@ theme: minima
 minima:
   skin: pitch-black
   hide_site_feed_link: true
+  header_pages:
+    - about.markdown
+    - photos.markdown
+    - posts.markdown
   social_links:
     - title: GitHub
       icon: github
