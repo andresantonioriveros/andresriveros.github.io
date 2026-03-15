@@ -1,0 +1,178 @@
+<dialog class="photo-modal" data-photo-modal>
+  <div class="photo-modal__surface">
+    <div class="photo-modal__actions">
+      <button type="button" class="photo-modal__info" data-photo-info-toggle aria-expanded="false" aria-controls="photo-modal-panel" aria-label="Toggle photo information">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="photo-modal__close" data-photo-close aria-label="Close photo">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="photo-modal__layout">
+      <button type="button" class="photo-modal__nav photo-modal__nav--prev" data-photo-prev aria-label="Previous photo">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <div class="photo-modal__image-shell" data-photo-image-shell>
+        <img class="photo-modal__image" data-photo-image src="" alt="">
+        <div class="photo-modal__fallback" data-photo-fallback hidden>
+          <i class="fa-regular fa-image" aria-hidden="true"></i>
+          <p>Image unavailable</p>
+        </div>
+      </div>
+      <button type="button" class="photo-modal__nav photo-modal__nav--next" data-photo-next aria-label="Next photo">
+        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+      </button>
+      <aside class="photo-modal__panel" id="photo-modal-panel" data-photo-panel>
+        <div class="photo-modal__meta">
+          <p data-photo-title></p>
+        </div>
+        <dl class="photo-modal__details">
+          <div>
+            <dt>Date</dt>
+            <dd data-photo-date></dd>
+          </div>
+          <div>
+            <dt>Camera</dt>
+            <dd data-photo-camera></dd>
+          </div>
+          <div data-photo-lens-row>
+            <dt>Lens</dt>
+            <dd data-photo-lens></dd>
+          </div>
+          <div data-photo-aperture-row>
+            <dt>Aperture</dt>
+            <dd data-photo-aperture></dd>
+          </div>
+          <div data-photo-shutter-row>
+            <dt>Shutter</dt>
+            <dd data-photo-shutter></dd>
+          </div>
+          <div data-photo-iso-row>
+            <dt>ISO</dt>
+            <dd data-photo-iso></dd>
+          </div>
+          <div data-photo-focal-row>
+            <dt>Focal Length</dt>
+            <dd data-photo-focal-length></dd>
+          </div>
+          <div data-photo-instagram-row>
+            <dt>Instagram</dt>
+            <dd>
+              <a class="photo-modal__instagram-link" href="#" data-photo-instagram-link target="_blank" rel="noreferrer" aria-label="Open Instagram post">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a class="photo-modal__instagram-link" href="#" data-photo-original-link target="_blank" rel="noreferrer" aria-label="Open original image">
+                <i class="fa-regular fa-image" aria-hidden="true"></i>
+              </a>
+            </dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  const modal = document.querySelector('[data-photo-modal]')
+  if (!modal) return
+
+  const image = modal.querySelector('[data-photo-image]')
+  const imageShell = modal.querySelector('[data-photo-image-shell]')
+  const title = modal.querySelector('[data-photo-title]')
+  const date = modal.querySelector('[data-photo-date]')
+  const camera = modal.querySelector('[data-photo-camera]')
+  const lens = modal.querySelector('[data-photo-lens]')
+  const aperture = modal.querySelector('[data-photo-aperture]')
+  const shutter = modal.querySelector('[data-photo-shutter]')
+  const iso = modal.querySelector('[data-photo-iso]')
+  const focalLength = modal.querySelector('[data-photo-focal-length]')
+  const instagramLink = modal.querySelector('[data-photo-instagram-link]')
+  const originalLink = modal.querySelector('[data-photo-original-link]')
+  const panel = modal.querySelector('[data-photo-panel]')
+  const infoToggle = modal.querySelector('[data-photo-info-toggle]')
+  const prevButton = modal.querySelector('[data-photo-prev]')
+  const nextButton = modal.querySelector('[data-photo-next]')
+  const triggers = [...document.querySelectorAll('[data-photo-trigger]')]
+  let currentIndex = 0
+
+  const toggleRow = (name, value) => {
+    const row = modal.querySelector(`[data-photo-${name}-row]`)
+    if (!row) return
+    row.hidden = !value
+  }
+
+  const setPanelOpen = (isOpen) => {
+    panel.dataset.open = isOpen ? 'true' : 'false'
+    infoToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false')
+  }
+
+  const setImageState = (hasError) => {
+    imageShell.dataset.error = hasError ? 'true' : 'false'
+  }
+
+  const renderPhoto = (trigger) => {
+    setImageState(false)
+    image.src = trigger.dataset.photoSrc
+    image.alt = trigger.dataset.photoAlt
+    title.textContent = trigger.dataset.photoTitle
+    date.textContent = trigger.dataset.photoDate || 'Unavailable'
+    camera.textContent = trigger.dataset.photoCamera || 'Unavailable'
+    lens.textContent = trigger.dataset.photoLens
+    aperture.textContent = trigger.dataset.photoAperture
+    shutter.textContent = trigger.dataset.photoShutter
+    iso.textContent = trigger.dataset.photoIso
+    focalLength.textContent = trigger.dataset.photoFocalLength
+    instagramLink.href = trigger.dataset.photoInstagram || '#'
+    instagramLink.setAttribute('aria-disabled', trigger.dataset.photoInstagram ? 'false' : 'true')
+    instagramLink.tabIndex = trigger.dataset.photoInstagram ? 0 : -1
+    originalLink.href = trigger.dataset.photoOriginal || trigger.dataset.photoSrc
+
+    toggleRow('lens', trigger.dataset.photoLens)
+    toggleRow('aperture', trigger.dataset.photoAperture)
+    toggleRow('shutter', trigger.dataset.photoShutter)
+    toggleRow('iso', trigger.dataset.photoIso)
+    toggleRow('focal', trigger.dataset.photoFocalLength)
+    modal.querySelector('[data-photo-instagram-row]').hidden = false
+  }
+
+  image.addEventListener('error', () => {
+    setImageState(true)
+  })
+
+  image.addEventListener('load', () => {
+    setImageState(false)
+  })
+
+  const stepPhoto = (direction) => {
+    currentIndex = (currentIndex + direction + triggers.length) % triggers.length
+    renderPhoto(triggers[currentIndex])
+  }
+
+  triggers.forEach((trigger, index) => {
+    trigger.addEventListener('click', () => {
+      currentIndex = index
+      renderPhoto(trigger)
+      setPanelOpen(false)
+      modal.showModal()
+    })
+  })
+
+  infoToggle.addEventListener('click', () => {
+    setPanelOpen(panel.dataset.open !== 'true')
+  })
+
+  prevButton.addEventListener('click', () => stepPhoto(-1))
+  nextButton.addEventListener('click', () => stepPhoto(1))
+
+  modal.querySelector('[data-photo-close]').addEventListener('click', () => modal.close())
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) modal.close()
+  })
+  modal.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') stepPhoto(-1)
+    if (event.key === 'ArrowRight') stepPhoto(1)
+  })
+  modal.addEventListener('close', () => setPanelOpen(false))
+})()
+</script>
