@@ -1,32 +1,202 @@
-.site-header .site-title {
-  font-size: 1.2rem;
-  font-weight: 700;
+:root {
+  --photos-bg: linear-gradient(180deg, #14171c 0%, #0f1115 100%);
+  --photos-panel: rgba(25, 28, 34, 0.92);
+  --photos-panel-soft: rgba(18, 21, 27, 0.92);
+  --photos-border: rgba(255, 255, 255, 0.08);
+  --photos-text: #f8fafc;
+  --photos-muted: rgba(226, 232, 240, 0.72);
+  --photos-accent: #f8fafc;
+  --photos-accent-strong: #ffffff;
 }
 
-.page-content {
-  min-height: calc(100vh - 8rem);
+body {
+  font-family: "Manrope", sans-serif;
+  background: #000;
+}
+
+.site-header .site-title {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.profile-overview {
+  min-height: calc(100vh - 13rem);
   display: grid;
   place-items: center;
-  padding: 0;
-}
-
-.page-content > .wrapper {
   text-align: center;
 }
 
-.page-content h1 {
+.profile-overview h1 {
   margin: 0 0 0.15rem;
   font-weight: 700;
 }
 
-.page-content p {
+.profile-overview p {
   margin: 0 0 0.85rem;
   font-size: 1.2rem;
   color: $brand-color-dimmed;
 }
 
+.photo-page {
+  width: min(100%, 1680px);
+  margin: 0 auto;
+}
+
+.photo-section {
+  position: relative;
+}
+
+.photo-section__shell {
+  display: grid;
+  gap: 1rem;
+  padding: 1px;
+  border: 1px solid var(--photos-border);
+  border-radius: 2rem;
+  background: var(--photos-panel-soft);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px);
+}
+
+.photo-grid {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: #11151b;
+  box-shadow: none;
+}
+
+.photo-card__button-reset {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.photo-card__button-reset:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: -2px;
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  transform: scale(1.001);
+  transition: transform 220ms ease, filter 220ms ease, opacity 220ms ease;
+}
+
+.photo-card__meta {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(6, 8, 12, 0.84) 100%);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.photo-card__date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.9rem 1rem;
+  background: linear-gradient(180deg, rgba(6, 8, 12, 0.84) 0%, transparent 100%);
+  color: rgba(248, 250, 252, 0.78);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.photo-card__meta p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--photos-text);
+}
+
+.photo-card:hover img,
+.photo-card:focus-within img {
+  transform: scale(1.03);
+  filter: saturate(1.04);
+}
+
+.photo-card:hover .photo-card__meta,
+.photo-card:hover .photo-card__date,
+.photo-card__button-reset:focus-visible .photo-card__meta,
+.photo-card__button-reset:focus-visible .photo-card__date {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@import "minima/photo-modal";
+
 .site-footer .footer-heading {
   margin: 0;
   font-size: 0.8rem;
   color: $brand-color-dimmed;
+}
+
+.site-footer .footer-heading a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-divider {
+  margin: 0 0.35rem;
+  opacity: 0.55;
+}
+
+@media (max-width: 860px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .photo-page {
+    width: 100%;
+  }
+
+  .photo-section__shell {
+    gap: 1rem;
+    padding: 1px;
+    border-radius: 1.5rem;
+  }
+
+  .photo-card {
+    border-radius: 1.35rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
 }

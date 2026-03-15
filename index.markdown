@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<section aria-label="Profile overview">
+<section class="profile-overview" aria-label="Profile overview">
   <div>
     <h1>{{ site.title }}</h1>
     <p>{{ site.description }}</p>
