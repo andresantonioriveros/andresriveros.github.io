@@ -1,0 +1,171 @@
+- title: Seattle, Washington
+  image: https://images.andresriveros.com/photos/DSC02579.JPG
+  date: 2024-06-15 12:20:12
+  camera: Sony ILCE-7CM2
+  lens: FE 24mm F2.8 G
+  settings:
+    aperture: f/22
+    shutter: 1/125s
+    iso: 50
+    focal_length: 24mm
+  instagram_url: https://www.instagram.com/p/C8yRPv0tphv/
+  local_image: /assets/images/photos/DSC02579.JPG
+- title: Vessel, New York
+  image: https://images.andresriveros.com/photos/DSC00290.JPG
+  date: 2023-10-11 11:39:18
+  camera: Sony ILCE-7CM2
+  lens: FE 24mm F2.8 G
+  settings:
+    aperture: f/2.8
+    shutter: 1/320s
+    iso: 100
+    focal_length: 24mm
+  instagram_url: https://www.instagram.com/p/CpHLxRwL-74/
+  local_image: /assets/images/photos/DSC00290.JPG
+- title: Petaluma
+  image: https://images.andresriveros.com/photos/20230225_202527.jpg
+  date: 2023-02-25 12:50:17
+  camera: Samsung SM-G991U
+  settings:
+    aperture: f/2.2
+    shutter: 1/10000s
+    iso: 50
+    focal_length: 2.2mm
+  instagram_url: https://www.instagram.com/p/CpHLxRwL-74/
+  local_image: /assets/images/photos/20230225_202527.jpg
+- title: Rodeo Beach
+  image: https://images.andresriveros.com/photos/20220611_124436.jpg
+  date: 2022-06-11 12:44:36
+  camera: Samsung SM-G991U
+  settings:
+    aperture: f/1.8
+    shutter: 1/2820s
+    iso: 40
+    focal_length: 5.4mm
+  instagram_url: https://www.instagram.com/p/Cer2plnJLuc/
+  local_image: /assets/images/photos/20220611_124436.jpg
+- title: Donner Pass
+  image: https://images.andresriveros.com/photos/20220530_103337.jpg
+  date: 2022-05-30 10:33:37
+  camera: Samsung SM-G991U
+  settings:
+    aperture: f/1.8
+    shutter: 1/3363s
+    iso: 40
+    focal_length: 5.4mm
+  instagram_url: https://www.instagram.com/p/CeMdHi8v7IH/
+  local_image: /assets/images/photos/20220530_103337.jpg
+- title: Lake Tahoe, California
+  image: https://images.andresriveros.com/photos/20220529_162515.jpg
+  date: 2022-05-29 16:25:15
+  camera: Samsung SM-G991U
+  settings:
+    aperture: f/1.8
+    shutter: 1/3502s
+    iso: 40
+    focal_length: 5.4mm
+  instagram_url: https://www.instagram.com/p/CeMc711vltP/
+  local_image: /assets/images/photos/20220529_162515.jpg
+- title: Johnson Canyon Trail
+  image: https://images.andresriveros.com/photos/20220529_130341.jpg
+  date: 2022-05-29 13:03:42
+  camera: Samsung SM-G991U
+  settings:
+    aperture: f/1.8
+    shutter: 1/5000s
+    iso: 40
+    focal_length: 5.4mm
+  instagram_url: https://www.instagram.com/p/CeMceuhvvAY/
+  local_image: /assets/images/photos/20220529_130341.jpg
+- title: Red Road
+  image: https://images.andresriveros.com/photos/20220314_124325-EDIT.jpg
+  original_image: https://images.andresriveros.com/photos/20220314_124325.jpg
+  date: 2022-03-14 12:43:25
+  camera: Samsung SM-G973F
+  settings:
+    aperture: f/2.2
+    shutter: 1/1667s
+    iso: 50
+    focal_length: 1.8mm
+  instagram_url: https://www.instagram.com/p/CcLrdOOvY9a/
+  local_image: /assets/images/photos/20220314_124325-EDIT.jpg
+  local_original_image: /assets/images/photos/20220314_124325.jpg
+- title: Zion National Park Tunnel
+  image: https://images.andresriveros.com/photos/20220313_130714.jpg
+  date: 2022-03-13 13:07:14
+  camera: Samsung SM-G973F
+  settings:
+    aperture: f/1.5
+    shutter: 1/8772s
+    iso: 80
+    focal_length: 4.32mm
+  instagram_url: https://www.instagram.com/p/CcLqaxevtKr/
+  local_image: /assets/images/photos/20220313_130714.jpg
+- title: Grand Canyon National Park
+  image: https://images.andresriveros.com/photos/20220311_183624.jpg
+  date: 2022-03-11 18:36:25
+  camera: Samsung SM-G973F
+  settings:
+    aperture: f/2.4
+    shutter: 1/119s
+    iso: 50
+    focal_length: 4.32mm
+  instagram_url: https://www.instagram.com/p/CcLpN0UPihH/
+  local_image: /assets/images/photos/20220311_183624.jpg
+- title: Horseshoe Bend
+  image: https://images.andresriveros.com/photos/20220313_065759_EDIT.jpg
+  original_image: https://images.andresriveros.com/photos/20220313_065759.jpg
+  object_position: center 62%
+  date: 2022-03-13 06:57:59
+  camera: Samsung SM-G973F
+  settings:
+    aperture: f/2.4
+    shutter: 1/149s
+    iso: 50
+    focal_length: 4.32mm
+  instagram_url: https://www.instagram.com/p/CbQrr_Ivjzv/
+  local_image: /assets/images/photos/20220313_065759_EDIT.jpg
+  local_original_image: /assets/images/photos/20220313_065759.jpg
+- title: Antelope Canyon
+  image: https://images.andresriveros.com/photos/20220312_095333.jpg
+  date: 2022-03-12 09:53:33
+  camera: Samsung SM-G973F
+  settings:
+    aperture: f/2.2
+    shutter: 1/33s
+    iso: 800
+    focal_length: 1.8mm
+  instagram_url: https://www.instagram.com/p/CbC3DkfLBeD/
+  local_image: /assets/images/photos/20220312_095333.jpg
+- title: Bodega Bay, California
+  image: https://images.andresriveros.com/photos/624214083_18111804109571134_8950625759435414050_n.jpg
+  date: 2021-10-11
+  camera: Metadata unavailable
+  instagram_url: https://www.instagram.com/p/CU6d1uXl5NC/
+  local_image: /assets/images/photos/624214083_18111804109571134_8950625759435414050_n.jpg
+- title: Embalse El Yeso, Cajon del Maipo
+  image: https://images.andresriveros.com/photos/IMG_2170-EDIT.jpg
+  original_image: https://images.andresriveros.com/photos/IMG_2170.JPG
+  date: 2016-07-23 12:40:43
+  camera: Apple iPhone 6 Plus
+  lens: iPhone 6 Plus back camera 4.15mm f/2.2
+  settings:
+    aperture: f/2.2
+    shutter: 1/2825s
+    iso: 32
+    focal_length: 4.15mm
+  instagram_url: ''
+  local_image: /assets/images/photos/IMG_2170-EDIT.jpg
+  local_original_image: /assets/images/photos/IMG_2170.JPG
+- title: Golden Gate, San Francisco
+  image: https://images.andresriveros.com/photos/IMG_1698.JPG
+  date: 2016-03-26 18:14:48
+  camera: Apple iPhone 6 Plus
+  lens: iPhone 6 Plus back camera 4.15mm f/2.2
+  settings:
+    aperture: f/2.2
+    shutter: 1/1276s
+    iso: 32
+    focal_length: 4.15mm
+  instagram_url: https://www.instagram.com/p/CfvOrVIOOVN/
+  local_image: /assets/images/photos/IMG_1698.JPG
