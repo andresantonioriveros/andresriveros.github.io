@@ -1,0 +1,38 @@
+<article class="photo-card">
+  <button
+    type="button"
+    class="photo-card__button-reset"
+    data-photo-trigger
+    {% assign photo_src = include.image %}
+    {% if jekyll.environment == "development" and include.local_image %}
+      {% assign photo_src = include.local_image | relative_url %}
+    {% endif %}
+    {% assign photo_alt = include.title %}
+    data-photo-src="{{ photo_src }}"
+    data-photo-alt="{{ photo_alt }}"
+    data-photo-title="{{ include.title }}"
+    data-photo-number="{{ include.number }}"
+    data-photo-date="{{ include.date | default: '' }}"
+    data-photo-camera="{{ include.camera | default: '' }}"
+    data-photo-lens="{{ include.lens | default: '' }}"
+    data-photo-aperture="{{ include.settings.aperture | default: '' }}"
+    data-photo-shutter="{{ include.settings.shutter | default: '' }}"
+    data-photo-iso="{{ include.settings.iso | default: '' }}"
+    data-photo-focal-length="{{ include.settings.focal_length | default: '' }}"
+    data-photo-instagram="{{ include.instagram_url | default: '' }}"
+    {% assign photo_original = include.original_image | default: include.image %}
+    {% if jekyll.environment == "development" and include.local_original_image %}
+      {% assign photo_original = include.local_original_image | relative_url %}
+    {% endif %}
+    data-photo-original="{{ photo_original }}"
+    aria-label="Open {{ include.title }}"
+  >
+    <img src="{{ photo_src }}" alt="{{ include.title }}"{% if include.object_position %} style="object-position: {{ include.object_position }};"{% endif %}>
+    {% if include.date %}
+      <div class="photo-card__date">{{ include.date | date: "%b %Y" }}</div>
+    {% endif %}
+    <div class="photo-card__meta">
+      <p>{{ include.title }}</p>
+    </div>
+  </button>
+</article>
