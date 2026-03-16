@@ -1,5 +1,5 @@
 ---
 layout: home
-title: Posts
+nav_title: Posts
 permalink: /posts/
 ---

@@ -4,16 +4,21 @@ title: Projects
 permalink: /projects/
 ---
 
-## Projects
-
-I'm putting together a dedicated project archive for the site.
-
-{% assign projects = site.projects | sort: "title" %}
+{% assign projects = site.projects | default: empty | sort: "title" %}
 
 {% if projects.size > 0 %}
-{% for project in projects %}
-- [{{ project.title }}]({{ project.url | relative_url }})
-{% endfor %}
+<ul class="post-list">
+  {% for project in projects %}
+  <li>
+    <h3>
+      <a class="post-link" href="{{ project.url | relative_url }}">
+        {{ project.title | escape }}
+      </a>
+    </h3>
+    {{ project.excerpt }}
+  </li>
+  {% endfor %}
+</ul>
 {% else %}
-No projects published yet.
+<p>No projects published yet.</p>
 {% endif %}
