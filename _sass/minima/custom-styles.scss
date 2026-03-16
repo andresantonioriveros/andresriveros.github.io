@@ -20,6 +20,42 @@ body {
   letter-spacing: -0.02em;
 }
 
+.site-nav .nav-item {
+  position: relative;
+  padding-bottom: 0.4rem;
+  font-weight: 500;
+  color: $brand-color-dimmed;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.site-nav .nav-item::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 0.2rem;
+  border-radius: 999px;
+  background: transparent;
+  transition: background-color 160ms ease;
+}
+
+.site-nav .nav-item:hover,
+.site-nav .nav-item:focus-visible,
+.site-nav .nav-item.is-active {
+  color: $text-color;
+  text-decoration: none;
+}
+
+.site-nav .nav-item.is-active {
+  font-weight: 800;
+}
+
+.site-nav .nav-item.is-active::before {
+  background: $text-color;
+}
+
 .profile-overview {
   min-height: calc(100vh - 13rem);
   display: grid;

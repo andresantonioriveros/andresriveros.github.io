@@ -1,0 +1,17 @@
+<div class="nav-items">
+  {%- assign current_url = page.url | append: "" -%}
+  {%- for path in include.paths -%}
+  {%- assign hyperpage = site.pages | where: "path", path | first -%}
+  {%- assign nav_url = hyperpage.url -%}
+  {%- assign nav_label = hyperpage.nav_title | default: hyperpage.title -%}
+  {%- if nav_label -%}
+  {%- assign nav_size = nav_url | size -%}
+  {%- assign current_prefix = current_url | slice: 0, nav_size -%}
+  {%- assign is_active = false -%}
+  {%- if current_url == nav_url or current_prefix == nav_url -%}
+    {%- assign is_active = true -%}
+  {%- endif -%}
+  <a class="nav-item{% if is_active %} is-active{% endif %}" href="{{ nav_url | relative_url }}"{% if current_url == nav_url %} aria-current="page"{% endif %}>{{ nav_label | escape }}</a>
+  {%- endif -%}
+  {%- endfor -%}
+</div>
