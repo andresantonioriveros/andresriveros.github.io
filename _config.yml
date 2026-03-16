@@ -29,25 +29,33 @@ theme: minima
 minima:
   skin: pitch-black
   hide_site_feed_link: true
-  header_pages:
-    - about.markdown
-    - photos.markdown
+  nav_pages:
     - posts.markdown
+    - photos.markdown
+    - projects.markdown
+    - about.markdown
   social_links:
+    - title: X
+      icon: x-twitter
+      url: https://x.com/andresariveros
+    - title: Threads
+      icon: threads
+      url: https://www.threads.net/@andresantonioriveros
+    - title: Instagram
+      icon: instagram
+      url: https://www.instagram.com/andresantonioriveros/
     - title: GitHub
       icon: github
       url: https://github.com/andresantonioriveros
     - title: LinkedIn
       icon: linkedin
       url: https://www.linkedin.com/in/aariveros
-    - title: Instagram
-      icon: instagram
-      url: https://www.instagram.com/andresantonioriveros/
-    - title: Threads
-      icon: threads
-      url: https://www.threads.net/@andresantonioriveros
 plugins:
   - jekyll-feed
+
+collections:
+  projects:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
