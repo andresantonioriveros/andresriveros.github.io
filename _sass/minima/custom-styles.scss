@@ -56,6 +56,22 @@ body {
   background: $text-color;
 }
 
+@include media-query($on-medium) {
+  .site-header {
+    z-index: 20;
+  }
+
+  .site-nav {
+    z-index: 30;
+  }
+
+  .site-nav label[for="nav-trigger"],
+  .site-nav .nav-items {
+    position: relative;
+    z-index: 31;
+  }
+}
+
 .profile-overview {
   min-height: calc(100vh - 13rem);
   display: grid;
