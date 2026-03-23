@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="32" fill="#FFFFFF"/>
+  <defs>
+    <clipPath id="favicon-light-logo-box" clipPathUnits="userSpaceOnUse">
+      <rect x="0" y="17" width="64" height="30"/>
+    </clipPath>
+    <clipPath id="favicon-light-slash-right" clipPathUnits="userSpaceOnUse">
+      <rect x="23.78" y="17" width="8.84" height="30"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#favicon-light-logo-box)" font-family="'Source Code Pro', ui-monospace, monospace" font-size="30" font-weight="800" letter-spacing="-2.17">
+    <text x="3.02" y="40.33" fill="#106B52">&lt;</text>
+    <text x="23.78" y="40.33" fill="#B85B19">/</text>
+    <text x="23.78" y="40.33" fill="#106B52" clip-path="url(#favicon-light-slash-right)">/</text>
+    <text x="42.59" y="40.33" fill="#B85B19">&gt;</text>
+  </g>
+</svg>

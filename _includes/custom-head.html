@@ -1,20 +1,39 @@
 <script>
   (() => {
+    const faviconPaths = {
+      light: "{{ '/assets/images/favicon-light.svg' | relative_url }}",
+      dark: "{{ '/assets/images/favicon-dark.svg' | relative_url }}"
+    };
     let storedTheme = null;
+    let storedLinkAccent = null;
 
     try {
       storedTheme = localStorage.getItem("theme");
+      storedLinkAccent = localStorage.getItem("linkAccent");
     } catch (_) {
       storedTheme = null;
+      storedLinkAccent = null;
     }
 
     const theme = storedTheme === "light" || storedTheme === "dark" ? storedTheme : "dark";
+    const linkAccent = storedLinkAccent === "brown" ? "brown" : "green";
     document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.linkAccent = linkAccent;
     document.documentElement.style.colorScheme = theme;
+
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.type = "image/svg+xml";
+    favicon.sizes = "any";
+    favicon.href = faviconPaths[theme];
+    favicon.dataset.siteFavicon = "true";
+    favicon.dataset.faviconLight = faviconPaths.light;
+    favicon.dataset.faviconDark = faviconPaths.dark;
+    document.head.appendChild(favicon);
   })();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
 <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
