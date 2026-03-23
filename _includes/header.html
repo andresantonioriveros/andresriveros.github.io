@@ -4,7 +4,14 @@
     {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
     {%- assign page_titles = site.pages | map: 'title' | compact %}
 
-    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+    <div class="site-brand">
+      <button type="button" class="site-brand__logo-button" data-link-accent-toggle aria-label="Switch link accent to brown">
+        <span class="site-brand__logo" aria-hidden="true">{% include site-logo.html %}</span>
+      </button>
+      <a class="site-title site-brand__title-link" rel="author" href="{{ '/' | relative_url }}">
+        <span class="site-brand__title">{{ site.title | escape }}</span>
+      </a>
+    </div>
 
     <div class="site-header__controls">
       {%- unless page_titles == empty %}
