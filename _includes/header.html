@@ -1,0 +1,29 @@
+<header class="site-header">
+  <div class="wrapper site-header__inner">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.minima.nav_pages | default: default_paths -%}
+    {%- assign page_titles = site.pages | map: 'title' | compact %}
+
+    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+
+    <div class="site-header__controls">
+      {%- unless page_titles == empty %}
+        <nav class="site-nav" aria-label="Primary">
+          <div class="site-nav__menu">
+            <input type="checkbox" id="nav-trigger" />
+            <label for="nav-trigger">
+              <span class="menu-icon"></span>
+            </label>
+
+            {% include nav-items.html paths = page_paths %}
+          </div>
+        </nav>
+      {%- endunless %}
+
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to light theme">
+        <svg data-theme-icon="sun" class="theme-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+        <svg data-theme-icon="moon" class="theme-toggle__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 1 0 9 9 9 9 0 1 1-9-9z"></path></svg>
+      </button>
+    </div>
+  </div>
+</header>
