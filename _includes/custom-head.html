@@ -1,1 +1,20 @@
+<script>
+  (() => {
+    let storedTheme = null;
+
+    try {
+      storedTheme = localStorage.getItem("theme");
+    } catch (_) {
+      storedTheme = null;
+    }
+
+    const theme = storedTheme === "light" || storedTheme === "dark" ? storedTheme : "dark";
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+<script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
