@@ -10,6 +10,8 @@
     focal_length: 24mm
   instagram_url: https://www.instagram.com/p/C8yRPv0tphv/
   local_image: /assets/images/photos/DSC02579.JPG
+  lat: 47.6062
+  lon: -122.3321
 - title: Vessel, New York
   image: https://images.andresriveros.com/photos/DSC00290.JPG
   date: 2023-10-11 11:39:18
@@ -22,6 +24,8 @@
     focal_length: 24mm
   instagram_url: https://www.instagram.com/p/CpHLxRwL-74/
   local_image: /assets/images/photos/DSC00290.JPG
+  lat: 40.7128
+  lon: -74.0060
 - title: Petaluma
   image: https://images.andresriveros.com/photos/20230225_202527.jpg
   date: 2023-02-25 12:50:17
@@ -33,6 +37,8 @@
     focal_length: 2.2mm
   instagram_url: https://www.instagram.com/p/CpHLxRwL-74/
   local_image: /assets/images/photos/20230225_202527.jpg
+  lat: 38.2324
+  lon: -122.6367
 - title: Rodeo Beach
   image: https://images.andresriveros.com/photos/20220611_124436.jpg
   date: 2022-06-11 12:44:36
@@ -44,6 +50,8 @@
     focal_length: 5.4mm
   instagram_url: https://www.instagram.com/p/Cer2plnJLuc/
   local_image: /assets/images/photos/20220611_124436.jpg
+  lat: 37.8296
+  lon: -122.5389
 - title: Donner Pass
   image: https://images.andresriveros.com/photos/20220530_103337.jpg
   date: 2022-05-30 10:33:37
@@ -55,6 +63,8 @@
     focal_length: 5.4mm
   instagram_url: https://www.instagram.com/p/CeMdHi8v7IH/
   local_image: /assets/images/photos/20220530_103337.jpg
+  lat: 39.3190
+  lon: -120.3287
 - title: Lake Tahoe, California
   image: https://images.andresriveros.com/photos/20220529_162515.jpg
   date: 2022-05-29 16:25:15
@@ -66,6 +76,8 @@
     focal_length: 5.4mm
   instagram_url: https://www.instagram.com/p/CeMc711vltP/
   local_image: /assets/images/photos/20220529_162515.jpg
+  lat: 39.0968
+  lon: -120.0324
 - title: Johnson Canyon Trail
   image: https://images.andresriveros.com/photos/20220529_130341.jpg
   date: 2022-05-29 13:03:42
@@ -77,7 +89,9 @@
     focal_length: 5.4mm
   instagram_url: https://www.instagram.com/p/CeMceuhvvAY/
   local_image: /assets/images/photos/20220529_130341.jpg
-- title: Red Road
+  lat: 37.6453
+  lon: -112.8747
+- title: Valley of Fire State Park
   image: https://images.andresriveros.com/photos/20220314_124325-EDIT.jpg
   original_image: https://images.andresriveros.com/photos/20220314_124325.jpg
   date: 2022-03-14 12:43:25
@@ -90,6 +104,8 @@
   instagram_url: https://www.instagram.com/p/CcLrdOOvY9a/
   local_image: /assets/images/photos/20220314_124325-EDIT.jpg
   local_original_image: /assets/images/photos/20220314_124325.jpg
+  lat: 36.4989
+  lon: -114.5341
 - title: Zion National Park Tunnel
   image: https://images.andresriveros.com/photos/20220313_130714.jpg
   date: 2022-03-13 13:07:14
@@ -101,6 +117,8 @@
     focal_length: 4.32mm
   instagram_url: https://www.instagram.com/p/CcLqaxevtKr/
   local_image: /assets/images/photos/20220313_130714.jpg
+  lat: 37.2982
+  lon: -113.0263
 - title: Grand Canyon National Park
   image: https://images.andresriveros.com/photos/20220311_183624.jpg
   date: 2022-03-11 18:36:25
@@ -112,6 +130,8 @@
     focal_length: 4.32mm
   instagram_url: https://www.instagram.com/p/CcLpN0UPihH/
   local_image: /assets/images/photos/20220311_183624.jpg
+  lat: 36.0544
+  lon: -112.1401
 - title: Horseshoe Bend
   image: https://images.andresriveros.com/photos/20220313_065759_EDIT.jpg
   original_image: https://images.andresriveros.com/photos/20220313_065759.jpg
@@ -126,6 +146,8 @@
   instagram_url: https://www.instagram.com/p/CbQrr_Ivjzv/
   local_image: /assets/images/photos/20220313_065759_EDIT.jpg
   local_original_image: /assets/images/photos/20220313_065759.jpg
+  lat: 36.8797
+  lon: -111.5106
 - title: Antelope Canyon
   image: https://images.andresriveros.com/photos/20220312_095333.jpg
   date: 2022-03-12 09:53:33
@@ -137,12 +159,16 @@
     focal_length: 1.8mm
   instagram_url: https://www.instagram.com/p/CbC3DkfLBeD/
   local_image: /assets/images/photos/20220312_095333.jpg
+  lat: 36.8619
+  lon: -111.3743
 - title: Bodega Bay, California
   image: https://images.andresriveros.com/photos/624214083_18111804109571134_8950625759435414050_n.jpg
   date: 2021-10-11
   camera: Metadata unavailable
   instagram_url: https://www.instagram.com/p/CU6d1uXl5NC/
   local_image: /assets/images/photos/624214083_18111804109571134_8950625759435414050_n.jpg
+  lat: 38.3330
+  lon: -123.0453
 - title: Embalse El Yeso, Cajon del Maipo
   image: https://images.andresriveros.com/photos/IMG_2170-EDIT.jpg
   original_image: https://images.andresriveros.com/photos/IMG_2170.JPG
@@ -157,6 +183,8 @@
   instagram_url: ''
   local_image: /assets/images/photos/IMG_2170-EDIT.jpg
   local_original_image: /assets/images/photos/IMG_2170.JPG
+  lat: -33.5833
+  lon: -70.0500
 - title: Golden Gate, San Francisco
   image: https://images.andresriveros.com/photos/IMG_1698.JPG
   date: 2016-03-26 18:14:48
@@ -169,3 +197,5 @@
     focal_length: 4.15mm
   instagram_url: https://www.instagram.com/p/CfvOrVIOOVN/
   local_image: /assets/images/photos/IMG_1698.JPG
+  lat: 37.8199
+  lon: -122.4783

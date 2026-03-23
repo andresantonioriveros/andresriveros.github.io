@@ -25,6 +25,8 @@
       {% assign photo_original = include.local_original_image | relative_url %}
     {% endif %}
     data-photo-original="{{ photo_original }}"
+    data-photo-lat="{{ include.lat | default: '' }}"
+    data-photo-lon="{{ include.lon | default: '' }}"
     aria-label="Open {{ include.title }}"
   >
     <img src="{{ photo_src }}" alt="{{ include.title }}"{% if include.object_position %} style="object-position: {{ include.object_position }};"{% endif %}>
